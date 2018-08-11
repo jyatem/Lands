@@ -1,17 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lands.Views.LoginPage">
+             x:Class="Lands.Views.LoginPage"
+             Title="Iniciar Sesión">
     <ContentPage.Content>
         <StackLayout Padding="10, 30, 10, 5">
             <Label Text="Lands" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
-            <Image Source="onu.png" WidthRequest="200"/>
-            <Label Text="Correo" />
-            <Entry Placeholder="Ingrese su correo..." Keyboard="Email"/>
-            <Label Text="Clave" />
-            <Entry Placeholder="Ingrese su clave..." IsPassword="True"/>
+            <Image Source="onu.png" WidthRequest="100"/>
+            <Grid Margin="0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Correo" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Entry Placeholder="Ingrese su correo..." Keyboard="Email" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Clave" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Entry Placeholder="Ingrese su clave..." IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Recordarme en este dispositivo" VerticalOptions="Center"></Label>
+                <!--HorizontalOptions="StartAndExpand"-->
+                <Switch></Switch>
+            </StackLayout>
             <ActivityIndicator></ActivityIndicator>
-            <Button Text="Iniciar sesión" BackgroundColor="Accent" TextColor="White" BorderRadius="15"/>
+            <StackLayout Margin="40,0">
+                <Button Text="Iniciar sesión" BackgroundColor="Accent" TextColor="White" BorderRadius="20" HeightRequest="
+                        40"/>
+                <Button Text="Registrarse" BackgroundColor="Purple" TextColor="White" BorderRadius="20" HeightRequest="40"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image WidthRequest="100" Source="facebook_logo.png"></Image>
+                <Image WidthRequest="100" Source="twitter_logo.png"></Image>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
