@@ -17,7 +17,7 @@
                 <Label Text="Clave" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End"/>
                 <Entry Placeholder="Ingrese su clave..." IsPassword="True" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Label Text="Recordarme en este dispositivo" VerticalOptions="Center"></Label>
                 <!--HorizontalOptions="StartAndExpand"-->
                 <Switch></Switch>
@@ -28,9 +28,9 @@
                         40"/>
                 <Button Text="Registrarse" BackgroundColor="Purple" TextColor="White" BorderRadius="20" HeightRequest="40"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Image WidthRequest="100" Source="facebook_logo.png"></Image>
-                <Image WidthRequest="100" Source="twitter_logo.png"></Image>
+                <Image WidthRequest="80" Source="twitter_logo.png"></Image>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
